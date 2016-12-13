@@ -1,0 +1,23 @@
+---
+layout: default
+title: Tutorials
+permalink: /tutorials/
+---
+
+
+{% assign myArray = site.array %}
+
+{% for page in site.tutorials %} 
+	{% unless myArray contains page.category %}
+		{% assign myArray = myArray | push: page.category %}
+    {% endunless %}
+{% endfor %}
+
+{% for category in myArray %}
+  	<h3>{{category}}</h3>
+  	{% for page in site.tutorials %}
+  		{% if page.category == category %} 
+		<li><a href="{{ page.url }}">{{ page.title }}</a></li>
+		{% endif %}
+	{% endfor %}
+{% endfor %}
