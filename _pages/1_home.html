@@ -1,0 +1,26 @@
+---
+layout: default
+title: Home
+permalink: /
+---
+
+<p>Welcome to the RXDS Online Process and Procedures Manual. Here you will find all the resources you need for processing digital files.</p>
+
+<p>Tips and Tricks as well as full blog posts will be added as processing issues are brought to our attention. Be sure to look at the blog section for possible solutions to any issues you may have encountered. If the issue is not there, please feel free to email us with your issue so that we can post on a possible solution. </p>
+
+{% assign myArray = site.array %}
+
+{% for page in site.tutorials %}
+	{% unless myArray contains page.category %}
+		{% assign myArray = myArray | push: page.category %}
+    {% endunless %}
+{% endfor %}
+<h3>Tutorials</h3>
+{% for category in myArray %}
+  	<h4>{{category}}</h4>
+  	{% for page in site.tutorials %}
+  		{% if page.category == category %}
+		<li><a href="{{ page.url | prepend:site.baseurl }}">{{ page.title }}</a></li>
+		{% endif %}
+	{% endfor %}
+{% endfor %}
