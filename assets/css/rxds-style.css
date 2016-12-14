@@ -1,3 +1,6 @@
+body {
+	padding-top: 70px;
+}
 .img-icon {
 	width: 50px;
 }
@@ -14,3 +17,4 @@
 .img-xlarge {
 	width: 100%;
 }
+
