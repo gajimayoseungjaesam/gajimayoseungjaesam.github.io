@@ -27,7 +27,6 @@ github_username:  jekyll
 # Build settings
 markdown: kramdown
 include: ['_pages']
-include: ['bower_components']
 
 collections:
   tutorials:
