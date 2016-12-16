@@ -25,8 +25,11 @@ p, li{
 	text-align: center;
 	padding: 15px;
 }
+.tutorial-nav {
+	margin-top: 25px;
+}
 .img-icon {
-	width: 50px;
+	width: 25px;
 }
 .img-small {
 	width: 35%;

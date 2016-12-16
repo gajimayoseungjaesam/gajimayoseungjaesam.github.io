@@ -16,13 +16,13 @@ permalink: /
     </div>
 
 
-    <div class="row">
+    <div class="row tutorial-nav">
         <div class="col-xs-12 text-center">
-            {% if page.previous.url %}<a class="btn btn-default" href="{{page.previous.url | prepend:site.baseurl }}">Previous</a>{%
-            endif %}
+            {% if page.previous.url %}<a class="btn btn-default" href="{{page.previous.url | prepend:site.baseurl }}"><i class="fa fa-arrow-left" aria-hidden="true"></i> Previous</a>
+            {% endif %}
             <a class="btn btn-default" href="{{site.baseurl}}/tutorials">Back to Main</a>
-            {% if page.next.url %}<a class="btn btn-default" href="{{page.next.url | prepend:site.baseurl }}">Next</a>{%
-            endif %}
+            {% if page.next.url %}<a class="btn btn-default" href="{{page.next.url | prepend:site.baseurl }}">Next <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+            {% endif %}
         </div>
     </div>
 </div>
