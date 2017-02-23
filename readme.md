@@ -2,6 +2,9 @@
 
 This is a blog/tutorial website template using Jekyll. 
 
+## Live Demo
+https://jarellano01.github.io/template_jekyll-tutorials/
+
 ## Features
 - Bootstrap template
 - Modularized layouts and partials
