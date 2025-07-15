@@ -1,36 +1,14 @@
 ---
 layout: default
-title: Tutorials
-permalink: /tutorials/
+title: 홈
+permalink: /
 ---
 
+![예시 이미지](/assets/images/ja-logo.png)
 
-<div class="container content">
-	<div class="title">
-		<h1>{{page.title}}</h1>
-	</div>
-	{% assign myArray = site.array %}
-	
-	{% for page in site.tutorials %}
-		{% unless myArray contains page.category %}
-			{% assign myArray = myArray | push: page.category %}
-		{% endunless %}
-	{% endfor %}
-	
-	{% for category in myArray %}
-		<h3>{{category}}</h3>
-		{% for page in site.tutorials %}
-			{% if page.category == category %}
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h3 class="panel-title">{{ page.title }}</h3>
-					</div>
-					<div class="panel-body">
-						{{ page.excerpt }}
-						<a href="{{ page.url | prepend:site.baseurl }}">Start Tutorial</a>
-					</div>
-				</div>
-			{% endif %}
-		{% endfor %}
-	{% endfor %}
-</div>
+# 환영합니다!
+
+이곳은 마크다운으로만 채운 메인 페이지입니다.
+
+- 사진도 넣을 수 있고
+- 글도 자유롭게 쓸 수 있습니다
